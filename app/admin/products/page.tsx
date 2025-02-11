@@ -25,6 +25,7 @@ export default function AdminProductsPage() {
           price: parseFloat(formData.get('price') as string),
           category: formData.get('category'),
           status: formData.get('status'),
+          meta_tags: JSON.parse(formData.get('meta_tags') as string), // Add this line
           created_by: user.id
         }])
         .select()

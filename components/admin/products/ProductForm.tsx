@@ -34,6 +34,9 @@ export default function ProductForm({ onSubmit, loading, initialData }: ProductF
   const [showOptionDialog, setShowOptionDialog] = useState(false);
   const [newOptionName, setNewOptionName] = useState('');
   const [newOptionValues, setNewOptionValues] = useState('');
+  const [metaTags, setMetaTags] = useState<Array<{key: string, value: string}>>(
+    initialData?.meta_tags || [{ key: '', value: '' }]
+  );
 
   useEffect(() => {
     if (initialData) {
@@ -69,6 +72,7 @@ export default function ProductForm({ onSubmit, loading, initialData }: ProductF
     formData.append('links', JSON.stringify(links));
     formData.append('specifications', JSON.stringify(specifications));
     formData.append('options', JSON.stringify(options));
+    formData.set('meta_tags', JSON.stringify(metaTags));
 
     // Handle image uploads
     const uploadedImages = await Promise.all(
@@ -155,6 +159,20 @@ export default function ProductForm({ onSubmit, loading, initialData }: ProductF
     setShowOptionDialog(false);
     setNewOptionName('');
     setNewOptionValues('');
+  };
+
+  const addMetaTag = () => {
+    setMetaTags([...metaTags, { key: '', value: '' }]);
+  };
+
+  const removeMetaTag = (index: number) => {
+    setMetaTags(metaTags.filter((_, i) => i !== index));
+  };
+
+  const updateMetaTag = (index: number, field: 'key' | 'value', value: string) => {
+    const newMetaTags = [...metaTags];
+    newMetaTags[index][field] = value;
+    setMetaTags(newMetaTags);
   };
 
   const renderLinkOptions = (link: any, linkIndex: number) => (
@@ -456,6 +474,42 @@ export default function ProductForm({ onSubmit, loading, initialData }: ProductF
             </Button>
           </div>
         ))}
+      </div>
+
+      <div className="space-y-4 p-6">
+        <h3 className="font-semibold">Meta Tags</h3>
+        {metaTags.map((tag, index) => (
+          <div key={index} className="flex gap-2">
+            <input
+              type="text"
+              placeholder="Key (e.g., description)"
+              value={tag.key}
+              onChange={(e) => updateMetaTag(index, 'key', e.target.value)}
+              className="flex-1 input"
+            />
+            <input
+              type="text"
+              placeholder="Value"
+              value={tag.value}
+              onChange={(e) => updateMetaTag(index, 'value', e.target.value)}
+              className="flex-1 input"
+            />
+            <button
+              type="button"
+              onClick={() => removeMetaTag(index)}
+              className="btn-danger"
+            >
+              Remove
+            </button>
+          </div>
+        ))}
+        <button
+          type="button"
+          onClick={addMetaTag}
+          className="btn-secondary"
+        >
+          Add Meta Tag
+        </button>
       </div>
 
       <ImageUpload

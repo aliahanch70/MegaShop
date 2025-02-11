@@ -28,6 +28,7 @@ export default function ProductEditPage({ params }: ProductEditPageProps) {
         .from('products')
         .select(`
           *,
+          meta_tags,
           product_images (url, label, order),
           product_specifications (category, label, value),
           product_options (name, values)
@@ -74,6 +75,7 @@ export default function ProductEditPage({ params }: ProductEditPageProps) {
           price: parseFloat(formData.get('price') as string),
           category: formData.get('category'),
           status: formData.get('status'),
+          meta_tags: JSON.parse(formData.get('meta_tags') as string), // Add this line
         })
         .eq('id', params.id);
 

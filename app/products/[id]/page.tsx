@@ -6,12 +6,45 @@ import { Button } from '@/components/ui/button';
 import { Pencil } from 'lucide-react';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
-
-
+import { Metadata, ResolvingMetadata } from 'next';
 
 interface ProductDetailsPageProps {
   params: {
     id: string;
+  };
+}
+
+// Generate metadata for the page
+export async function generateMetadata(
+  { params }: ProductDetailsPageProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const product = await getProduct(params.id);
+  if (!product) {
+    return {
+      title: 'Product not found',
+      description: 'The product you are looking for does not exist.',
+    };
+  }
+  
+  // Find title and description from meta_tags
+  const metaTags = (product as any)?.meta_tags || [];
+  interface MetaTag {
+    key: string;
+    value: string;
+  }
+
+  const titleTag: MetaTag | undefined = metaTags.find((tag: MetaTag) => tag.key === 'title');
+  const descriptionTag: MetaTag | undefined = metaTags.find((tag: MetaTag) => tag.key === 'description');
+
+  return {
+    title: titleTag?.value || product.name,
+    description: descriptionTag?.value || product.description,
+    // You can add more metadata here
+    openGraph: {
+      title: titleTag?.value || product.name,
+      description: descriptionTag?.value || product.description,
+    },
   };
 }
 
@@ -56,6 +89,7 @@ export default async function ProductDetailsPage({ params }: ProductDetailsPageP
         initialData={initialData}
       />
       <RelatedProducts products={relatedProducts} />
+      
     </div>
   );
 }
