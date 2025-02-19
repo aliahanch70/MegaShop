@@ -1,0 +1,377 @@
+[
+  {
+    "productId": "b2b74146-e71b-412e-868a-126729cb03a6",
+    "productName": "Premium Wireless",
+    "price": 10,
+    "category": "clothing",
+    "viewedAt": "2025-02-17T09:45:35.687Z",
+    "imageUrl": "/products/uploads/1737447596014-w3ykzbeut8j.jpg"
+  },
+  {
+    "productId": "769e08bb-5608-41e1-8cb0-30ec4537f782",
+    "productName": "Samsung a35",
+    "price": 310,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:45:51.285Z",
+    "imageUrl": "/products/uploads/1736328898014-hlci1has5k7.jpg"
+  },
+  {
+    "productId": "769e08bb-5608-41e1-8cb0-30ec4537f782",
+    "productName": "Samsung a35",
+    "price": 310,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:48:00.802Z",
+    "imageUrl": "/products/uploads/1736328898014-hlci1has5k7.jpg"
+  },
+  {
+    "productId": "769e08bb-5608-41e1-8cb0-30ec4537f782",
+    "productName": "Samsung a35",
+    "price": 310,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:48:18.936Z",
+    "imageUrl": "/products/uploads/1736328898014-hlci1has5k7.jpg"
+  },
+  {
+    "productId": "769e08bb-5608-41e1-8cb0-30ec4537f782",
+    "productName": "Samsung a35",
+    "price": 310,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:48:31.633Z",
+    "imageUrl": "/products/uploads/1736328898014-hlci1has5k7.jpg"
+  },
+  {
+    "productId": "13d2829e-cffd-402a-bfbb-cc2a6b764a97",
+    "productName": "poco f7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:48:42.054Z",
+    "imageUrl": "/products/uploads/1735718598519-n4c0w6galvl.jpg"
+  },
+  {
+    "productId": "13d2829e-cffd-402a-bfbb-cc2a6b764a97",
+    "productName": "poco f7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:48:43.154Z",
+    "imageUrl": "/products/uploads/1735718598519-n4c0w6galvl.jpg"
+  },
+  {
+    "productId": "5792d47e-af06-4ac8-8f54-a90db035dca9",
+    "productName": "Samsung a55",
+    "price": 360,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:49:27.732Z",
+    "imageUrl": "/products/uploads/1736328923490-te3bsut3zo.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:49:51.271Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "9e352f8b-7fc2-4e47-b370-7c02e6650438",
+    "productName": "t-shitt",
+    "price": 12,
+    "viewedAt": "2025-02-17T09:50:11.485Z",
+    "imageUrl": "/products/uploads/1737533295046-w38se96cpz.jpg"
+  },
+  {
+    "productId": "9e352f8b-7fc2-4e47-b370-7c02e6650438",
+    "productName": "t-shitt",
+    "price": 12,
+    "category": "clothing",
+    "viewedAt": "2025-02-17T09:50:12.346Z",
+    "imageUrl": "/products/uploads/1737533295046-w38se96cpz.jpg"
+  },
+  {
+    "productId": "9e352f8b-7fc2-4e47-b370-7c02e6650438",
+    "productName": "t-shitt",
+    "price": 12,
+    "category": "clothing",
+    "viewedAt": "2025-02-17T09:51:00.634Z",
+    "imageUrl": "/products/uploads/1737533295046-w38se96cpz.jpg"
+  },
+  {
+    "productId": "5792d47e-af06-4ac8-8f54-a90db035dca9",
+    "productName": "Samsung a55",
+    "price": 360,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:51:00.639Z",
+    "imageUrl": "/products/uploads/1736328923490-te3bsut3zo.webp"
+  },
+  {
+    "productId": "186b5a68-4119-4546-a041-c57d8fcd6ab0",
+    "productName": "iphone 16 pro max",
+    "price": 959.99,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:51:12.273Z",
+    "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg"
+  },
+  {
+    "productId": "5792d47e-af06-4ac8-8f54-a90db035dca9",
+    "productName": "Samsung a55",
+    "price": 360,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:55:45.822Z",
+    "imageUrl": "/products/uploads/1736328923490-te3bsut3zo.webp"
+  },
+  {
+    "productId": "186b5a68-4119-4546-a041-c57d8fcd6ab0",
+    "productName": "iphone 16 pro max",
+    "price": 959.99,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:55:45.825Z",
+    "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg"
+  },
+  {
+    "productId": "186b5a68-4119-4546-a041-c57d8fcd6ab0",
+    "productName": "iphone 16 pro max",
+    "price": 959.99,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:55:45.832Z",
+    "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg"
+  },
+  {
+    "productId": "5792d47e-af06-4ac8-8f54-a90db035dca9",
+    "productName": "Samsung a55",
+    "price": 360,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:55:45.930Z",
+    "imageUrl": "/products/uploads/1736328923490-te3bsut3zo.webp"
+  },
+  {
+    "productId": "186b5a68-4119-4546-a041-c57d8fcd6ab0",
+    "productName": "iphone 16 pro max",
+    "price": 959.99,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:57:53.883Z",
+    "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg"
+  },
+  {
+    "productId": "5792d47e-af06-4ac8-8f54-a90db035dca9",
+    "productName": "Samsung a55",
+    "price": 360,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:57:53.912Z",
+    "imageUrl": "/products/uploads/1736328923490-te3bsut3zo.webp"
+  },
+  {
+    "productId": "186b5a68-4119-4546-a041-c57d8fcd6ab0",
+    "productName": "iphone 16 pro max",
+    "price": 959.99,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:57:54.092Z",
+    "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg"
+  },
+  {
+    "productId": "5792d47e-af06-4ac8-8f54-a90db035dca9",
+    "productName": "Samsung a55",
+    "price": 360,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T09:57:54.097Z",
+    "imageUrl": "/products/uploads/1736328923490-te3bsut3zo.webp"
+  },
+  {
+    "productId": "186b5a68-4119-4546-a041-c57d8fcd6ab0",
+    "productName": "iphone 16 pro max",
+    "price": 959.99,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T10:02:54.149Z",
+    "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg"
+  },
+  {
+    "productId": "5792d47e-af06-4ac8-8f54-a90db035dca9",
+    "productName": "Samsung a55",
+    "price": 360,
+    "category": "electronics",
+    "viewedAt": "2025-02-17T10:02:54.264Z",
+    "imageUrl": "/products/uploads/1736328923490-te3bsut3zo.webp"
+  },
+  {
+    "productId": "f2006169-0f29-4244-9267-06b436155d17",
+    "productName": "poco x3",
+    "price": 250,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T05:08:20.308Z",
+    "imageUrl": "/products/uploads/1738139187800-yhze151apna.webp"
+  },
+  {
+    "productId": "9e352f8b-7fc2-4e47-b370-7c02e6650438",
+    "productName": "t-shitt",
+    "price": 12,
+    "category": "clothing",
+    "viewedAt": "2025-02-18T05:24:19.471Z",
+    "imageUrl": "/products/uploads/1737533295046-w38se96cpz.jpg"
+  },
+  {
+    "productId": "13d2829e-cffd-402a-bfbb-cc2a6b764a97",
+    "productName": "poco f7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T05:24:26.265Z",
+    "imageUrl": "/products/uploads/1735718598519-n4c0w6galvl.jpg"
+  },
+  {
+    "productId": "186b5a68-4119-4546-a041-c57d8fcd6ab0",
+    "productName": "iphone 16 pro max",
+    "price": 959.99,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T05:24:31.864Z",
+    "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg"
+  },
+  {
+    "productId": "5792d47e-af06-4ac8-8f54-a90db035dca9",
+    "productName": "Samsung a55",
+    "price": 360,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T05:24:42.089Z",
+    "imageUrl": "/products/uploads/1736328923490-te3bsut3zo.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T05:37:39.360Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T05:37:42.884Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T07:03:21.266Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T07:03:21.371Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T07:03:25.799Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T07:03:26.021Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T07:03:40.786Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T07:03:40.993Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T07:03:43.163Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T07:04:12.124Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T07:04:24.919Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T09:14:04.153Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "5792d47e-af06-4ac8-8f54-a90db035dca9",
+    "productName": "Samsung a55",
+    "price": 360,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T09:14:11.155Z",
+    "imageUrl": "/products/uploads/1736328923490-te3bsut3zo.webp"
+  },
+  {
+    "productId": "b2b74146-e71b-412e-868a-126729cb03a6",
+    "productName": "Premium Wireless",
+    "price": 10,
+    "category": "clothing",
+    "viewedAt": "2025-02-18T09:14:34.225Z",
+    "imageUrl": "/products/uploads/1737447596014-w3ykzbeut8j.jpg"
+  },
+  {
+    "productId": "186b5a68-4119-4546-a041-c57d8fcd6ab0",
+    "productName": "iphone 16 pro max",
+    "price": 959.99,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T09:14:39.899Z",
+    "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T12:29:48.169Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T12:29:51.932Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-18T12:29:52.665Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp"
+  }
+]

@@ -7,6 +7,7 @@ import { Pencil } from 'lucide-react';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import { Metadata, ResolvingMetadata } from 'next';
+import { trackProductView } from '@/lib/utils/viewTracker';
 
 interface ProductDetailsPageProps {
   params: {
@@ -59,6 +60,25 @@ export default async function ProductDetailsPage({ params }: ProductDetailsPageP
   const supabase = createServerComponentClient({ cookies });
   const { data: { session } } = await supabase.auth.getSession();
   
+  const [initialData, relatedProducts] = await Promise.all([
+    getProduct(params.id),
+    getRelatedProducts(params.id)
+  ]);
+
+  if (initialData) {
+    // Track view when page is loaded directly
+    await trackProductView({
+      productId: initialData.id,
+      productName: initialData.name,
+      price: initialData.price,
+      category: initialData.category,
+      viewedAt: new Date().toISOString(),
+      imageUrl: initialData.product_images?.[0]?.url ? 
+        `/products/${initialData.product_images[0].url}` : 
+        undefined
+    });
+  }
+
   // Get user role from profiles table
   const { data: userRole } = await supabase
     .from('profiles')
@@ -67,11 +87,6 @@ export default async function ProductDetailsPage({ params }: ProductDetailsPageP
     .single();
 
   const isAdmin = userRole?.role === 'admin';
-
-  const [initialData, relatedProducts] = await Promise.all([
-    getProduct(params.id),
-    getRelatedProducts(params.id)
-  ]);
 
   console.log(isAdmin)
 

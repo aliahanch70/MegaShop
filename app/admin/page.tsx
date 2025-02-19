@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Package, Plus, Settings } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-
+import SlideManager from '@/components/admin/SlideManager';
 
 export default function AdminPage() {
   const [productCount, setProductCount] = useState(0);
@@ -31,6 +31,24 @@ export default function AdminPage() {
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold mb-8">{t('admin.title')}</h1>
         
+        <section className="mb-8">
+        <Link href="/admin/slideshow">
+            <Card className="hover-card-effect cursor-pointer">
+              <CardHeader className="flex flex-row items-center justify-between pb-2">
+                <CardTitle className="text-lg font-medium">{t('admin.productSettings')}</CardTitle>
+                <Settings className="h-5 w-5 text-muted-foreground" />
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Modify or delete existing slides</p>
+                <Button variant="outline" className="w-full mt-4">
+                  {t('admin.productManagement')}
+                </Button>
+              </CardContent>
+            </Card>
+          </Link>
+         
+        </section>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link href="/admin/products">
             <Card className="hover-card-effect cursor-pointer">

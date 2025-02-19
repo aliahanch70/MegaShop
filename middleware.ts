@@ -6,6 +6,10 @@ export async function middleware(request: NextRequest) {
   const res = NextResponse.next();
   const supabase = createMiddlewareClient({ req: request, res });
 
+  // Forward the real IP to our API
+  const ip = request.ip ?? request.headers.get('x-real-ip');
+  res.headers.set('x-real-ip', ip ?? 'unknown');
+
   // Verify authentication and admin status
   const {
     data: { session },
@@ -39,6 +43,7 @@ export const config = {
   matcher: [
     '/dashboard/:path*',
     '/admin/:path*',
-    '/auth/:path*'
+    '/auth/:path*',
+    '/:path*'
   ]
 };

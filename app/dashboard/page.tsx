@@ -8,6 +8,7 @@ import KPICard from '@/components/dashboard/KPICard';
 import ActivityChart from '@/components/dashboard/ActivityChart';
 import SearchBar from '@/components/dashboard/SearchBar';
 import Navigation from '@/components/dashboard/Navigation';
+import MostViewedProducts from '@/components/dashboard/MostViewedProducts';
 import { Users, Activity, TrendingUp, Clock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -95,6 +96,11 @@ export default function DashboardPage() {
                   icon={<Clock className="h-4 w-4 text-muted-foreground" />}
                   description="Per user"
                 />
+              </div>
+
+              {/* Add Most Viewed Products Box */}
+              <div className="mb-8">
+                <MostViewedProducts />
               </div>
 
               {/* Charts and other content */}

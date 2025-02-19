@@ -6,7 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import LoadingBar from '@/components/LoadingBar';
 import { Toaster } from "react-hot-toast";
-
+import VisitTracker from '@/components/VisitTracker';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,6 +30,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <LanguageProvider>
+            <VisitTracker />
             <Navbar />
             <LoadingBar />
             {children}

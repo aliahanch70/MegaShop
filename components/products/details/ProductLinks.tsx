@@ -91,6 +91,7 @@ export default function ProductLinks({ links, options }: ProductLinksProps) {
                     {link.city} • {link.warranty}
                   </span>
                 </div>
+                
                 <ExternalLink className="h-4 w-4 ml-2" />
               </a>
             </Button>
