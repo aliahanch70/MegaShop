@@ -5,6 +5,7 @@ import { getProduct, type Product } from '@/lib/api/products';
 import ProductDetails from './ProductDetails';
 import ProductNotFound from './ProductNotFound';
 import ProductLoading from './ProductLoading';
+import SpecificationsPopup from './SpecificationsPopup';
 
 interface ProductPageClientProps {
   id: string;
@@ -16,17 +17,16 @@ export default function ProductPageClient({ id, initialData }: ProductPageClient
   const [loading, setLoading] = useState(!initialData);
 
   useEffect(() => {
-  if (!initialData) {
-    const loadProduct = async () => {
-      const data = await getProduct(id);
-      setProduct(data);
-      setLoading(false);
-    };
+    if (!initialData) {
+      const loadProduct = async () => {
+        const data = await getProduct(id);
+        setProduct(data);
+        setLoading(false);
+      };
 
-    loadProduct(); // فراخوانی تابع
-  }
-}, [initialData, id]);
-
+      loadProduct(); // فراخوانی تابع
+    }
+  }, [initialData, id]);
 
   if (loading) {
     return <ProductLoading />;
@@ -36,5 +36,11 @@ export default function ProductPageClient({ id, initialData }: ProductPageClient
     return <ProductNotFound />;
   }
 
-  return <ProductDetails id={id} initialData={product} />;
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <ProductDetails id={id} initialData={product} />
+
+      
+      </div>
+  );
 }

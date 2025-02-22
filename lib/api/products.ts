@@ -27,6 +27,7 @@ export interface Product {
   profiles: {
     full_name: string;
   };
+  specifications?: Array<{ key: string; value: string }>;
 }
 
 export async function getProduct(id: string): Promise<Product | null> {
