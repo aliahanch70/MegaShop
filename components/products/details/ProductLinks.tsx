@@ -76,7 +76,7 @@ export default function ProductLinks({ links, options }: ProductLinksProps) {
             <Button
               key={index}
               variant="outline"
-              className="w-full justify-between py-6" 
+              className="w-full justify-between py-10" 
               asChild
             >
               <a 
@@ -85,10 +85,10 @@ export default function ProductLinks({ links, options }: ProductLinksProps) {
                 rel="noopener noreferrer"
                 className="flex items-center text-lg justify-between w-full"
               >
-                <div className="flex flex-col">
-                  <span>{link.title} - ${Number(link.price).toFixed(2)}</span>
-                  <span className="text-sm text-gray-500">
-                    {link.city} • {link.warranty}
+                <div className="flex flex-col p-1">
+                  <span className='p-1'>{link.title} - ${Number(link.price).toFixed(2)}</span>
+                  <span className="text-sm text-gray-200 p-1 ">
+                    {link.city} • گارانتی {link.warranty}
                   </span>
                 </div>
                 

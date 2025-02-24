@@ -26,12 +26,10 @@ export default function ProductInfo({
         <div>
           <span className="text-muted-foreground">Category</span>
           <p className="font-medium capitalize">{category}</p>
-          <p>pocer face openrate our open ter uir aoura aura</p>
+          
         </div>
         
-        <div>
-          <span className="text-muted-foreground">Listed On</span>
-        </div>
+
       </div>
     </Card>
   );

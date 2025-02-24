@@ -21,7 +21,7 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
   return (
     <Card className="p-4 space-y-4 hover-card-effect">
       
-      <div className="relative aspect-square overflow-hidden rounded-lg">
+      <div className="relative aspect-square overflow-hidden rounded-lg bg-white">
         <Image
           src={sortedImages[selectedImage]?.url}
           alt={sortedImages[selectedImage]?.label}
@@ -35,7 +35,7 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
-            className={`relative aspect-square overflow-hidden rounded-md transition-all ${
+            className={`relative aspect-square overflow-hidden rounded-md transition-all bg-white ${
               selectedImage === index 
                 ? 'ring-2 ring-accent' 
                 : 'hover:ring-2 hover:ring-accent/50'

@@ -32,14 +32,7 @@ export default function RelatedProducts({ products }: RelatedProductsProps) {
                     <span className="text-lg font-bold">
                       ${product.price.toLocaleString()}
                     </span>
-                    <div className="flex items-center">
-                      {[...Array(5)].map((j, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 fill-accent text-accent"
-                        />
-                      ))}
-                    </div>
+                    
                   </div>
                 </div>
               </Card>

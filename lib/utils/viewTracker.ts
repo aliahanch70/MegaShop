@@ -6,42 +6,41 @@ interface ProductView {
   productName: string;
   price: number;
   category: string;
-  viewedAt: string;
   imageUrl?: string;
+  viewedAt: string;
+  ipAddress?: string;
 }
 
-export const trackProductView = async (product: ProductView) => {
-  const filePath = path.join(process.cwd(), 'view.json');
-  
+export async function trackProductView(viewData: Omit<ProductView, 'ipAddress'>) {
   try {
-    let views: ProductView[] = [];
+    // Get IP address from external service
+    const ipResponse = await fetch('https://api.ipify.org?format=json');
+    const { ip } = await ipResponse.json();
     
-    // Ensure the file exists
-    if (!fs.existsSync(filePath)) {
-      fs.writeFileSync(filePath, '[]', 'utf-8');
-    }
-    
-    // Read existing views
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
-    views = JSON.parse(fileContent || '[]');
-    
-    // Add new view
-    views.push({
-      ...product,
+    const view = {
+      ...viewData,
+      ipAddress: ip,
       viewedAt: new Date().toISOString()
-    });
-    
-    // Keep only last 100 views
-    if (views.length > 100) {
-      views = views.slice(-100);
+    };
+
+    const filePath = path.join(process.cwd(), 'view.json');
+    let views: ProductView[] = [];
+
+    // Read existing views if file exists
+    if (fs.existsSync(filePath)) {
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      views = JSON.parse(fileContent);
     }
-    
-    // Write back to file with proper formatting
+
+    // Add new view
+    views.push(view);
+
+    // Write back to file
     fs.writeFileSync(filePath, JSON.stringify(views, null, 2));
-    
+
     return true;
   } catch (error) {
     console.error('Error tracking product view:', error);
     return false;
   }
-};
+}

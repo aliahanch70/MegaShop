@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface Slide {
   id: string;
@@ -14,6 +15,7 @@ interface Slide {
 }
 
 export default function Slideshow({ slides }: { slides: Slide[] }) {
+  const router = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -26,6 +28,12 @@ export default function Slideshow({ slides }: { slides: Slide[] }) {
 
     return () => clearInterval(timer);
   }, [slides.length, isHovered]);
+
+  const handleSlideClick = (link?: string) => {
+    if (link) {
+      router.push(link);
+    }
+  };
 
   if (!slides.length) return null;
 
@@ -40,8 +48,9 @@ export default function Slideshow({ slides }: { slides: Slide[] }) {
           key={slide.id}
           className={`absolute top-0 left-0 w-full h-full transition-all duration-500 ${
             index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-          }`}
+          } ${slide.button_link ? 'cursor-pointer' : ''}`}
           style={{ pointerEvents: index === currentSlide ? 'auto' : 'none' }}
+          onClick={() => handleSlideClick(slide.button_link)}
         >
           <div className="relative w-full h-full overflow-hidden">
             <img
@@ -59,12 +68,9 @@ export default function Slideshow({ slides }: { slides: Slide[] }) {
                   <Button 
                     variant="secondary" 
                     size="lg" 
-                    className="relative z-30 hover:scale-105 transition-transform"
-                    asChild
+                    className="relative z-30 hover:scale-105 transition-transform pointer-events-none"
                   >
-                    <Link href={slide.button_link}>
-                      {slide.button_text}
-                    </Link>
+                    {slide.button_text}
                   </Button>
                 )}
               </div>

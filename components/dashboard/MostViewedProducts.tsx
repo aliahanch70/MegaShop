@@ -2,22 +2,40 @@ import { useState, useEffect } from 'react';
 import viewData from '../../view.json';
 import Link from 'next/link';
 
+interface ViewData {
+  productId: string;
+  productName: string;
+  price: number;
+  category: string;
+  imageUrl?: string;
+  viewedAt: string;
+  ipAddress?: string;
+}
+
 const MostViewedProducts = () => {
   const [topProducts, setTopProducts] = useState<Array<any>>([]);
 
   useEffect(() => {
-    // Group records by productId and count views
-    const viewCounts = viewData.reduce((acc, cur) => {
-      if (acc[cur.productId]) {
-        acc[cur.productId].views += 1;
+    // Group records by productId and count unique IP addresses
+    const viewCounts = (viewData as ViewData[]).reduce((acc, cur) => {
+      if (!acc[cur.productId]) {
+        acc[cur.productId] = {
+          ...cur,
+          views: new Set([cur.ipAddress]),
+        };
       } else {
-        acc[cur.productId] = { ...cur, views: 1 };
+        acc[cur.productId].views.add(cur.ipAddress);
       }
       return acc;
     }, {} as Record<string, any>);
 
+    // Convert views Set to count and sort products
     const sortedProducts = Object.values(viewCounts)
-      .sort((a: any, b: any) => b.views - a.views)
+      .map(product => ({
+        ...product,
+        views: product.views.size,
+      }))
+      .sort((a, b) => b.views - a.views)
       .slice(0, 6);
 
     setTopProducts(sortedProducts);

@@ -39,7 +39,7 @@ export default function ProductGrid({ products, loading }: ProductGridProps) {
       {products.map((product) => (
         <Link key={product.id} href={`/products/${product.id}`}>
           <Card className="hover-card-effect group">
-            <div className="aspect-square relative overflow-hidden rounded-t-lg">
+            <div className="aspect-square relative overflow-hidden rounded-t-lg bg-white">
               <Image
                 src={product.product_images[0]?.url || '/placeholder.jpg'}
                 alt={product.name}
