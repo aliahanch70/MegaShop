@@ -1,10 +1,9 @@
 'use client';
 
 import { useRef, useState, MouseEvent } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import Image from 'next/image';
-import Link from 'next/link';
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
+import { Star } from 'lucide-react';
 
 interface Product {
   id: string;
@@ -46,7 +45,6 @@ export default function ProductScroll({ products }: ProductScrollProps) {
           imageUrl: getImageUrl(product.product_images[0]?.url)
         }),
       });
-      
       if (!response.ok) {
         console.error('Failed to track product view');
       }
@@ -72,7 +70,6 @@ export default function ProductScroll({ products }: ProductScrollProps) {
   const handleMouseMove = (e: MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
-    
     if (scrollContainerRef.current) {
       const x = e.pageX - scrollContainerRef.current.offsetLeft;
       const walk = (x - startX) * 2; // Adjust scrolling speed
@@ -113,24 +110,32 @@ export default function ProductScroll({ products }: ProductScrollProps) {
               className="flex-none w-[38vw] sm:w-[200px] md:w-[250px]"
               onClick={(e: any) => handleClick(e, product.id)}
             >
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
-                <CardContent className="p-2 sm:p-4 flex flex-col">
-                  <div className="aspect-square relative w-full mb-2 sm:mb-3">
-                    <Image
-                      src={getImageUrl(product.product_images[0]?.url)}
-                      alt={product.name}
-                      fill
-                      className="object-cover rounded-lg"
-                      draggable={false}
-                    />
+              <Card className="hover-card-effect group">
+                <div className="aspect-square relative overflow-hidden rounded-t-lg bg-white">
+                  <Image
+                    src={getImageUrl(product.product_images[0]?.url)}
+                    alt={product.name}
+                    fill
+                    className="object-cover transition-transform group-hover:scale-105"
+                    draggable={false}
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold truncate">{product.name}</h3>
+                  <div className="flex items-center justify-between mt-2">
+                    <span className="text-lg font-bold">
+                      ${product.price.toLocaleString()}
+                    </span>
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-4 h-4 fill-accent text-accent"
+                        />
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex flex-col flex-1 justify-between">
-                    <h3 className="font-semibold line-clamp-2 text-sm sm:text-base">
-                      {product.name}
-                    </h3>
-                    <p className="text-sm text-gray-500 mt-1">${product.price}</p>
-                  </div>
-                </CardContent>
+                </div>
               </Card>
             </div>
           ))}

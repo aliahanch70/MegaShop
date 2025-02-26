@@ -394,5 +394,41 @@
     "viewedAt": "2025-02-24T10:29:10.341Z",
     "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg",
     "ipAddress": "92.223.59.61"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-25T08:12:40.845Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp",
+    "ipAddress": "81.19.216.5"
+  },
+  {
+    "productId": "186b5a68-4119-4546-a041-c57d8fcd6ab0",
+    "productName": "iphone 16 pro max",
+    "price": 959.99,
+    "category": "electronics",
+    "viewedAt": "2025-02-26T07:40:54.719Z",
+    "imageUrl": "/products/uploads/1736228835353-c0kd2yoo6fs.jpg",
+    "ipAddress": "81.19.216.4"
+  },
+  {
+    "productId": "b3dd492f-46e4-44cc-b84b-0814f9a4ca82",
+    "productName": "poco x7",
+    "price": 320,
+    "category": "electronics",
+    "viewedAt": "2025-02-26T07:40:54.727Z",
+    "imageUrl": "/products/uploads/1736578630647-zjxw55iwlip.webp",
+    "ipAddress": "81.19.216.4"
+  },
+  {
+    "productId": "769e08bb-5608-41e1-8cb0-30ec4537f782",
+    "productName": "Samsung a35",
+    "price": 310,
+    "category": "electronics",
+    "viewedAt": "2025-02-26T07:41:07.494Z",
+    "imageUrl": "/products/uploads/1736328898014-hlci1has5k7.jpg",
+    "ipAddress": "81.19.216.4"
   }
 ]
